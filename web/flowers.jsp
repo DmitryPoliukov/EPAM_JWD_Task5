@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: radof
@@ -32,7 +33,7 @@
     <th>ColorLeaf</th>
     <th>AverageSize</th>
     <th>Temperature</th>
-    <th>IsPhotophilousg</th>
+    <th>IsPhotophilous</th>
     <th>Watering</th>
     <th>Multiplying</th>
 

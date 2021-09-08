@@ -34,7 +34,7 @@ public class XMLParser extends HttpServlet {
         AbstractFlowerBuilder builder = null;
         try {
             builder = factory.createFlowerBuilder(button.toUpperCase());
-            builder.buildFlowerList("E:\\JWD\\Tasks_java\\EPAM_JWD_task5\\src\\by\\epamtc\\poliukov\\resources\\flowers.xml");
+            builder.buildFlowerList("src/by/epamtc/poliukov/resources/flowers.xml");
         } catch (ParserException | IncorrectInputException | ParserConfigurationException e) {
             logger.catching(e);
         }
@@ -42,7 +42,7 @@ public class XMLParser extends HttpServlet {
         request.getRequestDispatcher("/flowers.jsp").forward(request, response);
     }
 
-    private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void processRequest(HttpServletRequest request, HttpServletResponse response)  {
 
 
     }
