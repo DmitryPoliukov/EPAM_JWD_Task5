@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://poliukov.by/flowers"
+         xsi:schemaLocation="http://poliukov.by/flowers flowers.xsd">
+
+    <acanthus id="Acanthus1" name="Acanthus_mollis">
+        <soil>ground</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>red</colorLeaf>
+            <averageFlowerSize>70</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>18</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>500</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </acanthus>
+
+    <acanthus id="Acanthus2" name="Aphelandra">
+        <soil>ground</soil>
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>green</colorLeaf>
+            <averageFlowerSize>200</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>22</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>400</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </acanthus>
+
+    <acanthus id="Acanthus3" name="Asystasia" origin="Asia">
+        <soil>ground</soil>
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>pink</colorLeaf>
+            <averageFlowerSize>100</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>18</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>600</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </acanthus>
+
+    <acanthus id="Acanthus4" name="Acanthus montanus" origin="South America">
+        <soil>ground</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>white</colorLeaf>
+            <averageFlowerSize>200</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>20</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>800</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </acanthus>
+
+    <acanthus id="Acanthus5" name="Avicennia" origin="Australia">
+        <soil>ground</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>green</colorLeaf>
+            <averageFlowerSize>5000</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>22</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>1200</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </acanthus>
+
+    <acanthus id="Acanthus6" name="Crossandra" origin="India">
+        <soil>ground</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>red</colorLeaf>
+            <averageFlowerSize>25</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>18</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>700</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </acanthus>
+
+    <acanthus id="Acanthus7" name="Dicliptera" origin="South America">
+        <soil>ground</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>green</colorLeaf>
+            <averageFlowerSize>30</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>20</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>500</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </acanthus>
+
+    <acanthus id="Acanthus8" name="Lepidagathis" origin="Africa">
+        <soil>ground</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>white</colorLeaf>
+            <averageFlowerSize>20</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>25</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>1000</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </acanthus>
+
+    <cactus id="Cactus1" name="Carnegiea_gigantea" origin="Mexico">
+
+        <soil>podzolic</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>green</colorLeaf>
+            <averageFlowerSize>2000</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>35</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>200</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </cactus>
+
+    <cactus id="Cactus2" name="Astrophytum" origin="Mexico">
+
+        <soil>sod-podzolic</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>green</colorLeaf>
+            <averageFlowerSize>15</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>12</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>200</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </cactus>
+
+    <cactus id="Cactus3" name="Epiphyllum" origin="Mexico">
+
+        <soil>podzolic</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>green</colorLeaf>
+            <averageFlowerSize>30</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>20</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>200</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </cactus>
+
+    <cactus id="Cactus4" name="Opuntia" origin="West India">
+
+        <soil>ground</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>green</colorLeaf>
+            <averageFlowerSize>55</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>17</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>200</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </cactus>
+
+    <cactus id="Cactus5" name="Rebutia" origin="Argentina">
+
+        <soil>podzolic</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>red</colorLeaf>
+            <averageFlowerSize>25</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>12</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>150</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </cactus>
+
+    <cactus id="Cactus6" name="Gymnocalycium" origin="Mexico">
+
+        <soil>podzolic</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>pink</colorLeaf>
+            <averageFlowerSize>27</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>15</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>300</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </cactus>
+
+    <cactus id="Cactus7" name="Echinopsis" origin="Bolivia">
+
+        <soil>podzolic</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>pink</colorLeaf>
+            <averageFlowerSize>50</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>10</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>180</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </cactus>
+    <cactus id="Cactus8" name="Stapelia" origin="South Africa">
+
+        <soil>podzolic</soil>
+
+        <visual_parameters>
+            <colorStem>green</colorStem>
+            <colorLeaf>green</colorLeaf>
+            <averageFlowerSize>15</averageFlowerSize>
+        </visual_parameters>
+
+        <growing_tips>
+            <temperature>12</temperature>
+            <isPhotophilous>true</isPhotophilous>
+            <watering>200</watering>
+        </growing_tips>
+
+        <multiplying>seeds</multiplying>
+
+    </cactus>
+
+
+</flowers>

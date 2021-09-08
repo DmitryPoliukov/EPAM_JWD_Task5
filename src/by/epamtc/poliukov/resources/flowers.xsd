@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://poliukov.by/flowers"
+        xmlns:tns="http://poliukov.by/flowers"
+        attributeFormDefault="unqualified"
+        elementFormDefault="qualified">
+
+    <element name="flowers">
+        <complexType>
+            <sequence>
+                <element ref="tns:flower"
+                         minOccurs="16"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="flower" type="tns:Flower" abstract="true"/>
+    <element name="acanthus" type="tns:Acanthus" substitutionGroup="tns:flower"/>
+    <element name="cactus" type="tns:Cactus" substitutionGroup="tns:flower"/>
+
+
+    <complexType name="Flower">
+        <sequence>
+            <element name="soil" type="tns:Soil"/>
+            <element name="visual_parameters" type="tns:VisualParameters"/>
+            <element name="growing_tips" type="tns:GrowingTips"/>
+            <element name="multiplying" type="string"/>
+        </sequence>
+        <attribute name="id" type="tns:id" use="required"/>
+    </complexType>
+
+    <complexType name="Acanthus">
+        <complexContent>
+            <extension base="tns:Flower">
+                <attribute name="name" type="tns:Name" use="required"/>
+                <attribute name="origin" type="tns:Origin" use="optional"/>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Cactus">
+        <complexContent>
+            <extension base="tns:Flower">
+                <attribute name="name" type="tns:Name" use="required"/>
+                <attribute name="origin" type="tns:Origin" use="optional"/>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <simpleType name="id">
+        <restriction base="ID">
+            <pattern value="([a-zA-Z]+\d{1,8})"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Name">
+        <restriction base="string">
+            <pattern value=".+"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Origin">
+        <restriction base="string">
+            <pattern value="([a-zA-Z]+(\s[a-zA-Z]+)*)"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Soil">
+        <restriction base="string">
+            <enumeration value="podzolic"/>
+            <enumeration value="ground"/>
+            <enumeration value="sod-podzolic"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="GrowingTips">
+        <sequence>
+            <element name="temperature" type="integer"/>
+            <element name="isPhotophilous" type="boolean"/>
+            <element name="watering" type="integer"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="VisualParameters">
+        <sequence>
+            <element name="colorStem" type="string"/>
+            <element name="colorLeaf" type="string"/>
+            <element name="averageFlowerSize" type="integer"/>
+        </sequence>
+    </complexType>
+
+</schema>
