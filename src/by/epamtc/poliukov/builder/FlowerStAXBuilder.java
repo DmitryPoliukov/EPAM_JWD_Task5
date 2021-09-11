@@ -28,7 +28,7 @@ public class FlowerStAXBuilder extends AbstractFlowerBuilder {
     private final String CACTUS = "cactus";
     private final String ACANTHUS = "acanthus";
     private final String COLOR_LEAF = "colorLeaf";
-    private final String COLOR_STEAM = "colorSteam";
+    private final String COLOR_STEM = "colorStem";
     private final String TEMPERATURE = "temperature";
     private final String SOIL = "soil";
     private final String AVERAGE_FLOWER_SIZE = "averageFlowerSize";
@@ -67,7 +67,7 @@ public class FlowerStAXBuilder extends AbstractFlowerBuilder {
                     } else if(startElement.getName().getLocalPart().equals(COLOR_LEAF)) {
                         xmlEvent = xmlEventReader.nextEvent();
                         flower.setColorLeaf(xmlEvent.asCharacters().getData());
-                    } else if(startElement.getName().getLocalPart().equals(COLOR_STEAM)) {
+                    } else if(startElement.getName().getLocalPart().equals(COLOR_STEM)) {
                         xmlEvent = xmlEventReader.nextEvent();
                         flower.setColorStem(xmlEvent.asCharacters().getData());
                     } else if(startElement.getName().getLocalPart().equals(TEMPERATURE)) {

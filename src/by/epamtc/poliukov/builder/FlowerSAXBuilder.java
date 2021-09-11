@@ -30,7 +30,7 @@ public class FlowerSAXBuilder extends AbstractFlowerBuilder {
         private final String CACTUS = "cactus";
         private final String ACANTHUS = "acanthus";
         private final String COLOR_LEAF = "colorLeaf";
-        private final String COLOR_STEAM = "colorSteam";
+        private final String COLOR_STEM = "colorStem";
         private final String TEMPERATURE = "temperature";
         private final String SOIL = "soil";
         private final String AVERAGE_FLOWER_SIZE = "averageFlowerSize";
@@ -39,7 +39,7 @@ public class FlowerSAXBuilder extends AbstractFlowerBuilder {
         private final String IS_PHOTOPHILOUS = "isPhotophilous";
 
         private boolean flagColorLeaf = false;
-        private boolean flagColorSteam = false;
+        private boolean flagColorStem = false;
         private boolean flagTemperature = false;
         private boolean flagSoil = false;
         private boolean flagAverageFlowerSize = false;
@@ -51,26 +51,37 @@ public class FlowerSAXBuilder extends AbstractFlowerBuilder {
 
         @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) {
-            if (qName.equals(ACANTHUS)) {
-                flower = new Acanthus();
-            } else if (qName.equals(CACTUS)) {
-                flower = new Cactus();
-            } else if (qName.equals(COLOR_LEAF)) {
-                flagColorLeaf = true;
-            } else if (qName.equals(COLOR_STEAM)) {
-                flagColorSteam = true;
-            } else if (qName.equals(TEMPERATURE)) {
-                flagTemperature = true;
-            } else if (qName.equals(SOIL)) {
-                flagSoil = true;
-            } else if (qName.equals(AVERAGE_FLOWER_SIZE)) {
-                flagAverageFlowerSize = true;
-            } else if (qName.equals(WATERING)) {
-                flagWatering = true;
-            } else if (qName.equals(MULTIPLYING)) {
-                flagMultiplying = true;
-            } else if (qName.equals(IS_PHOTOPHILOUS)) {
-                flagIsPhotophilous = true;
+            switch (qName) {
+                case ACANTHUS:
+                    flower = new Acanthus();
+                    break;
+                case CACTUS:
+                    flower = new Cactus();
+                    break;
+                case COLOR_LEAF:
+                    flagColorLeaf = true;
+                    break;
+                case COLOR_STEM:
+                    flagColorStem = true;
+                    break;
+                case TEMPERATURE:
+                    flagTemperature = true;
+                    break;
+                case SOIL:
+                    flagSoil = true;
+                    break;
+                case AVERAGE_FLOWER_SIZE:
+                    flagAverageFlowerSize = true;
+                    break;
+                case WATERING:
+                    flagWatering = true;
+                    break;
+                case MULTIPLYING:
+                    flagMultiplying = true;
+                    break;
+                case IS_PHOTOPHILOUS:
+                    flagIsPhotophilous = true;
+                    break;
             }
 
             for (int i = 0; i < attributes.getLength(); i++) {
@@ -80,12 +91,45 @@ public class FlowerSAXBuilder extends AbstractFlowerBuilder {
 
         public void attributesCharacters(String attribute, String value) {
 
-            if (attribute.equals(ID)) {
-                flower.setId(value);
-            } else if (attribute.equals(NAME)) {
-                flower.setName(value);
-            } else if (attribute.equals(ORIGIN)) {
-                flower.setOrigin(value);
+            switch (attribute) {
+                case ID:
+                    flower.setId(value);
+                    break;
+                case NAME:
+                    flower.setName(value);
+                    break;
+                case ORIGIN:
+                    flower.setOrigin(value);
+                    break;
+            }
+        }
+
+        @Override
+        public void characters(char[] ch, int start, int length) {
+            if(flagColorLeaf) {
+                flower.setColorLeaf(new String(ch, start, length));
+                flagColorLeaf = false;
+            } else if(flagColorStem) {
+                flower.setColorStem(new String(ch, start, length));
+                flagColorStem = false;
+            } else if (flagTemperature) {
+                flower.setTemperature(Integer.parseInt(new String(ch, start, length)));
+                flagTemperature = false;
+            } else if (flagSoil) {
+                flower.setSoil(new String(ch, start, length));
+                flagSoil = false;
+            } else if(flagAverageFlowerSize) {
+                flower.setAverageFlowerSize(Integer.parseInt(new String(ch, start, length)));
+                flagAverageFlowerSize = false;
+            } else if (flagWatering) {
+                flower.setWatering(Integer.parseInt(new String(ch, start, length)));
+                flagWatering = false;
+            } else if (flagMultiplying) {
+                flower.setMultiplying(new String(ch, start, length));
+                flagMultiplying = false;
+            } else if (flagIsPhotophilous) {
+                flower.setPhotophilous(Boolean.parseBoolean(new String(ch, start, length)));
+                flagIsPhotophilous = false;
             }
         }
 
