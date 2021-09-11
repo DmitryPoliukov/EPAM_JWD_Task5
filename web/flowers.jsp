@@ -29,7 +29,7 @@
     <th>Origin</th>
     <th>ID</th>
     <th>SOIL</th>
-    <th>ColorSteam</th>
+    <th>ColorStem</th>
     <th>ColorLeaf</th>
     <th>AverageSize</th>
     <th>Temperature</th>
@@ -43,11 +43,11 @@
             <td><c:out value="${item.origin}" /></td>
             <td><c:out value="${item.id}" /></td>
             <td><c:out value="${item.soil}" /></td>
-            <td><c:out value="${item.colorSteam}" /></td>
+            <td><c:out value="${item.colorStem}" /></td>
             <td><c:out value="${item.colorLeaf}" /></td>
-            <td><c:out value="${item.averagePlantSize}" /></td>
+            <td><c:out value="${item.averageFlowerSize}" /></td>
             <td><c:out value="${item.temperature}" /></td>
-            <td><c:out value="${item.isPhotophilous}" /></td>
+            <td><c:out value="${item.photophilous}" /></td>
             <td><c:out value="${item.watering}" /></td>
             <td><c:out value="${item.multiplying}" /></td>
         </tr>

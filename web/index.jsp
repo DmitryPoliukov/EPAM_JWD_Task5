@@ -20,8 +20,6 @@ Upload File:
 
 Parse XML file:
 <form action="${pageContext.request.contextPath}/parser" method="post">
-  <input type="hidden" name="pathToXML" value="./data/flowers.xml">
-  <input type="hidden" name="pathToXSD" value="./data/flowers.xsd">
   <button type="submit" name="button" value="DOM">DOMParser</button>
   <button type="submit" name="button" value="SAX">SAXParser</button>
   <button type="submit" name="button" value="STAX">StAXParser</button>
